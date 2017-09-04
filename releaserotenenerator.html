@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Git Comment Browser</title>
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <script src="node_modules/vss-web-extension-sdk/lib/VSS.SDK.js"></script>
+</head>
+
+<body class="wrapper">
+    <div id="header"></div>
+    <div id="container">
+        <div class="input-controls">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <label>Repository</label>
+                            <div class="repoPicker"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label>Branch</label>
+                            <div class="branchPicker"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label>From Tag</label>
+                            <div class="fromTagPicker"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label>To Tag</label>
+                            <div class="toTagPicker"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label>From Date</label>
+                            <div class="fromDate"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label>To Date</label>
+                            <div class="toDate"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="bowtie" style="padding-left:1em">
+                            <button class="refreshBtn" style="width:130px" aria-label="Refresh">Refresh</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="bowtie" style="padding-left:1em">
+                            <button class="resetBtn" style="width:130px">Reset</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="bowtie" style="padding-left:1em">
+                            <button class="releaseBtn" style="width:130px">Show Tree</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="bowtie" style="padding-left:1em">
+                            <button class="markDownBtn" style="width:130px">Create Notes</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tables">
+        <div class="reqTable" style="display: block;">
+            <label class="header">PullRequests</label>
+            <div class="reqResults"></div>
+        </div>
+        <div class="commentTables" style="display: block;">
+            <label class="header">Commits</label>
+            <div class="results"></div>
+        </div>
+        <div class="releaseTable" style="display: none;">
+            <label class="header">Release Notes</label>
+            <div class="release"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Initialize framework 
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true,
+            configureModuleLoader: true
+        });
+        // Load main entry point for extension
+        VSS.require(["dist/app"], function () {
+            // Loading succeeded
+            VSS.notifyLoadSucceeded();
+        });
+    </script>
+</body>
+
+</html>

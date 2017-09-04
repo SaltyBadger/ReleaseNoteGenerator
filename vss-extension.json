@@ -1,0 +1,63 @@
+{
+    "manifestVersion": 1,
+    "id": "ReleaseNoteGenerator",
+    "version": "0.0.6",
+    "name": "Release Note Generator",
+    "description": "Create Mark down and plain text release notes and see all comments for a repository, a branch or between git tags.",
+    "publisher": "IntelTIM",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "content": {
+        "details": {
+            "path": "details.md"
+        }
+    },
+    "public": true,
+    "contributions": [
+        {
+            "id": "IntelTIM.ReleaseNoteGenerator",
+            "type": "ms.vss-web.hub",
+            "description": "See all comments for a repository, a branch or between git tags and create release notes",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "Release Note Generator",
+                "order": 99,
+                "uri": "releaserotenenerator.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.code_manage",
+        "vso.work"
+    ],
+    "files": [
+        {
+            "path": "releaserotenenerator.html",
+            "addressable": true
+        },
+        {
+            "path": "Css/style.css",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true
+        },
+        {
+            "path": "images",
+            "addressable": true
+        }
+    ]
+}
