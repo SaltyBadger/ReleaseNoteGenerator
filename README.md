@@ -8,7 +8,7 @@ This extension finds workitems which are linked to pullrequest and presents them
 
 In addition its possible to create a tree view which shows the hierarchy and links for pullreqeusts and workitems.   
 
-[title](https://marketplace.visualstudio.com/items?itemName=IntelTIM.ReleaseNoteGenerator)
+[Link to Marketplace.](https://marketplace.visualstudio.com/items?itemName=IntelTIM.ReleaseNoteGenerator)
 
 
 ![mainWindow](Images/Capture.PNG)
